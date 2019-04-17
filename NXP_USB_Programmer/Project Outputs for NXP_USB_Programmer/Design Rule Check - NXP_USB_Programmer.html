@@ -1,0 +1,479 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4/16/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:06:22 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc">C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">45</td></tr>
+</table>
+</td>
+</table><a name="IDEWLW5EGYCLGBCQWIRI2ENZ2T0LO5W0RPXRDYYIML4PNVD5Y2CW0E"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIA5UJYKBIY5OHW1GWYREXOSXH05DL42JJEMTHNLECY1GTOAJSAO">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRTTOPGAXLYOWCQ2PGJUYJVRUFHT33FGAYDNOK1DJ0ABV0TFCX32K">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGGLAXW2LXBCYI13FYPWZ0QFV2M4VRKXMMWWFJVHUIM3M1UTL24CO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">25</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5IO40T00JNAX1LHTU24F40YLI2BQUCACKV1XGLWBW5LYR2ZW4YL">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNOCQPQYBVDRGJPCQ2WHYKS2FDO4ZOIVNVVD1EGEXF0I2ZUCOEXVL">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5EJNQ5PEMXUOIHFPYOK5BK1U1IYKWIYJ0HZO4ZMFYBTYSG5ZABJJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDW0RO4CM4QOPXCQSJMB4P0B3E4BNXQXB5NGOVBOF1IXEFX5JUOOJE">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4CVUHJ1YDEB0KTMWLOKWCOHN0FXU3UD1KPC35OHOJLXLRHLYATZC">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEVO1GH1WCAXMCKOODKV3RVC4RHJXZ3BRMQW0WDIYN2QQPFQVUEBH">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRGDFBG4F3SAMMU4KZLKEXQNFOMSTQI0EBKZWUHN5MJXJZCDD3XIG">Silk To Solder Mask (Clearance=0.05mm) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPM1YWULXC03HCSA4SY5YHPMVCPFTSMUFJ4HD2XHJKA304DF3VFPJ">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGH5FNKLET5NZKCK1KY0G40FKMIPHNPD0PC2EHPGU3AI1EUMCAFMO">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCQFRM40PPVXMMXIZ5WENQLRMQI244MAP50AXPQIMXD1OYLHXJ51O">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">45</td>
+</tr>
+</table><br><a name="IDIA5UJYKBIY5OHW1GWYREXOSXH05DL42JJEMTHNLECY1GTOAJSAO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.2mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.694mil|Location2.X=1451.944mil|Location1.Y=1900.419mil|Location2.Y=1906.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.694mil|Location2.X=1451.944mil|Location1.Y=1900.419mil|Location2.Y=1906.668mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.2mm) Between Pad U1-1(11.25mm,22.8mm) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGGLAXW2LXBCYI13FYPWZ0QFV2M4VRKXMMWWFJVHUIM3M1UTL24CO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1724.347mil|Location2.X=2481.362mil|Location1.Y=1752.102mil|Location2.Y=1840.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1724.347mil|Location2.X=2481.362mil|Location1.Y=1752.102mil|Location2.Y=1840.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(18.8mm,20.95mm) on Top Layer And Pad P1-6(37mm,19.73mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1640.158mil|Location2.X=1920.866mil|Location1.Y=1724.803mil|Location2.Y=1519.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1640.158mil|Location2.X=1920.866mil|Location1.Y=1724.803mil|Location2.Y=1519.291mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(18.8mm,20.95mm) on Top Layer And Track (20.85mm,7mm)(20.85mm,10.65mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1537.339mil|Location2.X=1755.968mil|Location1.Y=1808.992mil|Location2.Y=1958.724mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1537.339mil|Location2.X=1755.968mil|Location1.Y=1808.992mil|Location2.Y=1958.724mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (14mm,24mm) from Top Layer to Bottom Layer And Pad C1-1(18.8mm,20.95mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1437.008mil|Location2.X=1755.968mil|Location1.Y=1850.331mil|Location2.Y=1903.543mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1437.008mil|Location2.X=1755.968mil|Location1.Y=1850.331mil|Location2.Y=1903.543mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U1-1(11.25mm,22.8mm) on Top Layer And Pad C1-2(18.8mm,22mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1411.874mil|Location1.Y=1287.339mil|Location2.Y=1451.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1411.874mil|Location1.Y=1287.339mil|Location2.Y=1451.244mil|Absolute=True">Un-Routed Net Constraint: Net NetC2_1 Between Pad J1-1(4.675mm,7.6mm) on Top Layer And Pad C2-1(10mm,11mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1488.646mil|Location1.Y=1261.748mil|Location2.Y=1445.338mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1488.646mil|Location1.Y=1261.748mil|Location2.Y=1445.338mil|Absolute=True">Un-Routed Net Constraint: Net NetC3_1 Between Pad J1-2(4.675mm,6.95mm) on Top Layer And Pad C3-1(12mm,10.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1456.236mil|Location2.X=1606.693mil|Location1.Y=1412.929mil|Location2.Y=2041.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1456.236mil|Location2.X=1606.693mil|Location1.Y=1412.929mil|Location2.Y=2041.732mil|Absolute=True">Un-Routed Net Constraint: Net NetC3_1 Between Pad C3-1(12mm,10.9mm) on Top Layer And Pad U1-15(15.1mm,26.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1567.386mil|Location1.Y=1236.158mil|Location2.Y=1445.338mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1567.386mil|Location1.Y=1236.158mil|Location2.Y=1445.338mil|Absolute=True">Un-Routed Net Constraint: Net NetC4_1 Between Pad J1-3(4.675mm,6.3mm) on Top Layer And Pad C4-1(14mm,10.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.976mil|Location2.X=1606.693mil|Location1.Y=1412.929mil|Location2.Y=2022.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.976mil|Location2.X=1606.693mil|Location1.Y=1412.929mil|Location2.Y=2022.047mil|Absolute=True">Un-Routed Net Constraint: Net NetC4_1 Between Pad C4-1(14mm,10.9mm) on Top Layer And Pad U1-14(15.1mm,25.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1797.307mil|Location1.Y=1184.976mil|Location2.Y=1252.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.48mil|Location2.X=1797.307mil|Location1.Y=1184.976mil|Location2.Y=1252.032mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-5(4.675mm,5mm) on Top Layer And Pad C5-2(19.85mm,6mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1988.126mil|Location2.X=2015.811mil|Location1.Y=1492.063mil|Location2.Y=1644.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1988.126mil|Location2.X=2015.811mil|Location1.Y=1492.063mil|Location2.Y=1644.748mil|Absolute=True">Un-Routed Net Constraint: Net RESET_N Between Pad D1-1(25.45mm,13mm) on Top Layer And Pad R1-1(25.45mm,16mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1143.638mil|Location2.X=1214.63mil|Location1.Y=1184.976mil|Location2.Y=1409.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1143.638mil|Location2.X=1214.63mil|Location1.Y=1184.976mil|Location2.Y=1409.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-6(4.45mm,9.5mm) on Top Layer And Pad J1-5(4.675mm,5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.646mil|Location2.X=1549.606mil|Location1.Y=1651.512mil|Location2.Y=2079.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.646mil|Location2.X=1549.606mil|Location1.Y=1651.512mil|Location2.Y=2079.134mil|Absolute=True">Un-Routed Net Constraint: Net NetL1_2 Between Pad L1-2(12mm,17mm) on Top Layer And Pad U1-19(13.75mm,27.1mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.331mil|Location2.X=2481.362mil|Location1.Y=1889.37mil|Location2.Y=2051.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.331mil|Location2.X=2481.362mil|Location1.Y=1889.37mil|Location2.Y=2051.441mil|Absolute=True">Un-Routed Net Constraint: Net RXD Between Pad U1-2(11.75mm,22.9mm) on Top Layer And Pad P1-1(37mm,26.08mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=2481.362mil|Location1.Y=1946.457mil|Location2.Y=2001.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=2481.362mil|Location1.Y=1946.457mil|Location2.Y=2001.441mil|Absolute=True">Un-Routed Net Constraint: Net NetP1_2 Between Pad U1-30(10.9mm,24.25mm) on Top Layer And Pad P1-2(37mm,24.81mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1437.008mil|Location2.X=1604.331mil|Location1.Y=1891.732mil|Location2.Y=2059.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1437.008mil|Location2.X=1604.331mil|Location1.Y=1891.732mil|Location2.Y=2059.055mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U1-1(11.25mm,22.8mm) on Top Layer And Pad U1-16(15.2mm,26.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.488mil|Location2.X=2013.386mil|Location1.Y=1835.039mil|Location2.Y=1552.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.488mil|Location2.X=2013.386mil|Location1.Y=1835.039mil|Location2.Y=1552.756mil|Absolute=True">Un-Routed Net Constraint: Net NetD1_2 Between Pad U1-10(15.1mm,23.75mm) on Top Layer And Track (23.2mm,11.5mm)(24.95mm,11.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.488mil|Location2.X=2013.386mil|Location1.Y=1854.724mil|Location2.Y=1572.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.488mil|Location2.X=2013.386mil|Location1.Y=1854.724mil|Location2.Y=1572.441mil|Absolute=True">Un-Routed Net Constraint: Net NetD2_2 Between Pad U1-11(15.1mm,24.25mm) on Top Layer And Track (23.2mm,12mm)(27mm,12mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1513.386mil|Location2.X=1586.614mil|Location1.Y=2054.724mil|Location2.Y=2079.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1513.386mil|Location2.X=1586.614mil|Location1.Y=2054.724mil|Location2.Y=2079.134mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-20(13.25mm,27.1mm) on Top Layer And Pad U1-17(14.75mm,27.2mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.071mil|Location2.X=1569.291mil|Location1.Y=2054.724mil|Location2.Y=2079.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.071mil|Location2.X=1569.291mil|Location1.Y=2054.724mil|Location2.Y=2079.134mil|Absolute=True">Un-Routed Net Constraint: Net NetL1_2 Between Pad U1-19(13.75mm,27.1mm) on Top Layer And Pad U1-18(14.25mm,27.1mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1497.968mil|Location2.X=1529.921mil|Location1.Y=2009.78mil|Location2.Y=2079.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1497.968mil|Location2.X=1529.921mil|Location1.Y=2009.78mil|Location2.Y=2079.134mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (13mm,26mm) from Top Layer to Bottom Layer And Pad U1-20(13.25mm,27.1mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=1448.819mil|Location1.Y=2025.197mil|Location2.Y=2076.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=1448.819mil|Location1.Y=2025.197mil|Location2.Y=2076.772mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-26(10.9mm,26.25mm) on Top Layer And Pad U1-24(11.25mm,27.2mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=1486.283mil|Location1.Y=2009.78mil|Location2.Y=2041.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1416.929mil|Location2.X=1486.283mil|Location1.Y=2009.78mil|Location2.Y=2041.732mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-26(10.9mm,26.25mm) on Top Layer And Via (12mm,26mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1493.701mil|Location2.X=1525.653mil|Location1.Y=1889.37mil|Location2.Y=1958.724mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1493.701mil|Location2.X=1525.653mil|Location1.Y=1889.37mil|Location2.Y=1958.724mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-4(12.75mm,22.9mm) on Top Layer And Via (13mm,24mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1661.811mil|Location2.X=2017.323mil|Location1.Y=1315.354mil|Location2.Y=1670.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1661.811mil|Location2.X=2017.323mil|Location1.Y=1315.354mil|Location2.Y=1670.866mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Track (19.35mm,10.409mm)(19.35mm,10.55mm) on Top Layer And Track (23.3mm,14.5mm)(23.851mm,14.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRGDFBG4F3SAMMU4KZLKEXQNFOMSTQI0EBKZWUHN5MJXJZCDD3XIG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.05mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1995.332mil|Location2.X=1997.644mil|Location1.Y=1617.938mil|Location2.Y=1620.251mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1995.332mil|Location2.X=1997.644mil|Location1.Y=1617.938mil|Location2.Y=1620.251mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.05mm) Between Pad R1-1(25.45mm,16mm) on Top Layer And Text "D1" (25.184mm,14.281mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDPM1YWULXC03HCSA4SY5YHPMVCPFTSMUFJ4HD2XHJKA304DF3VFPJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1453.686mil|Location2.X=1461.353mil|Location1.Y=1495.765mil|Location2.Y=1503.432mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1453.686mil|Location2.X=1461.353mil|Location1.Y=1495.765mil|Location2.Y=1503.432mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C2" (9.335mm,12.69mm) on Top Overlay And Text "C3" (11.621mm,12.279mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.683mil|Location2.X=1550.35mil|Location1.Y=1539.679mil|Location2.Y=1547.345mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.683mil|Location2.X=1550.35mil|Location1.Y=1539.679mil|Location2.Y=1547.345mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C3" (11.621mm,12.279mm) on Top Overlay And Text "C4" (13.628mm,12.284mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2048.167mil|Location2.X=2055.833mil|Location1.Y=1558.427mil|Location2.Y=1566.093mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2048.167mil|Location2.X=2055.833mil|Location1.Y=1558.427mil|Location2.Y=1566.093mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "D1" (25.184mm,14.281mm) on Top Overlay And Text "D2" (26.721mm,13.278mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGH5FNKLET5NZKCK1KY0G40FKMIPHNPD0PC2EHPGU3AI1EUMCAFMO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.366mil|Location2.X=1835.955mil|Location1.Y=1410.791mil|Location2.Y=1444.991mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.366mil|Location2.X=1835.955mil|Location1.Y=1410.791mil|Location2.Y=1444.991mil|Absolute=True">Net Antennae: Track (20.85mm,7mm)(20.85mm,10.65mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.736mil|Location2.X=1875.325mil|Location1.Y=1576.146mil|Location2.Y=1610.345mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.736mil|Location2.X=1875.325mil|Location1.Y=1576.146mil|Location2.Y=1610.345mil|Absolute=True">Net Antennae: Track (21.85mm,14.85mm)(21.85mm,17mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1904.886mil|Location2.X=1928.474mil|Location1.Y=1444.256mil|Location2.Y=1478.455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1904.886mil|Location2.X=1928.474mil|Location1.Y=1444.256mil|Location2.Y=1478.455mil|Absolute=True">Net Antennae: Track (23.2mm,11.5mm)(24.95mm,11.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1904.886mil|Location2.X=1928.474mil|Location1.Y=1463.941mil|Location2.Y=1498.14mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1904.886mil|Location2.X=1928.474mil|Location1.Y=1463.941mil|Location2.Y=1498.14mil|Absolute=True">Net Antennae: Track (23.2mm,12mm)(27mm,12mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1908.823mil|Location2.X=1932.411mil|Location1.Y=1562.366mil|Location2.Y=1596.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1908.823mil|Location2.X=1932.411mil|Location1.Y=1562.366mil|Location2.Y=1596.566mil|Absolute=True">Net Antennae: Track (23.3mm,14.5mm)(23.851mm,14.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1175.555mil|Location2.X=1199.144mil|Location1.Y=1641.106mil|Location2.Y=1675.306mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1175.555mil|Location2.X=1199.144mil|Location1.Y=1641.106mil|Location2.Y=1675.306mil|Absolute=True">Net Antennae: Track (4.675mm,16.5mm)(7.5mm,16.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True">Net Antennae: Via (12mm,24mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True">Net Antennae: Via (12mm,25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1455.098mil|Location2.X=1497.937mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True">Net Antennae: Via (12mm,26mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True">Net Antennae: Via (13mm,24mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True">Net Antennae: Via (13mm,25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1494.468mil|Location2.X=1537.307mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True">Net Antennae: Via (13mm,26mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=1927.539mil|Location2.Y=1993.762mil|Absolute=True">Net Antennae: Via (14mm,24mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=1966.909mil|Location2.Y=2033.132mil|Absolute=True">Net Antennae: Via (14mm,25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\NXP_USB_Programmer.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1533.839mil|Location2.X=1576.677mil|Location1.Y=2006.28mil|Location2.Y=2072.502mil|Absolute=True">Net Antennae: Via (14mm,26mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

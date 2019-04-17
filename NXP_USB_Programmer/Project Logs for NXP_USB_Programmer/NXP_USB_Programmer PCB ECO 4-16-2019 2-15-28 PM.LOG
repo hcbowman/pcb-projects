@@ -1,0 +1,25 @@
+Added Component: Designator=J1(FCI-10118193-0001LF-5_V)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(COM-UART-FT232R-SQ32)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC2_1 Pin=J1-1
+Added Pin To Net: NetName=NetC3_1 Pin=J1-2
+Added Pin To Net: NetName=NetC4_1 Pin=J1-3
+Added Pin To Net: NetName=GND Pin=J1-5
+Added Pin To Net: NetName=GND Pin=J1-6
+Added Pin To Net: NetName=3V3 Pin=U1-1
+Added Pin To Net: NetName=RXD Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-4
+Added Pin To Net: NetName=NetD1_2 Pin=U1-10
+Added Pin To Net: NetName=NetD2_2 Pin=U1-11
+Added Pin To Net: NetName=NetC4_1 Pin=U1-14
+Added Pin To Net: NetName=NetC3_1 Pin=U1-15
+Added Pin To Net: NetName=3V3 Pin=U1-16
+Added Pin To Net: NetName=GND Pin=U1-17
+Added Pin To Net: NetName=NetL1_2 Pin=U1-18
+Added Pin To Net: NetName=NetL1_2 Pin=U1-19
+Added Pin To Net: NetName=GND Pin=U1-20
+Added Pin To Net: NetName=GND Pin=U1-24
+Added Pin To Net: NetName=GND Pin=U1-26
+Added Pin To Net: NetName=NetP1_2 Pin=U1-30
+Added Pin To Net: NetName=GND Pin=U1-33
