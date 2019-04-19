@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: NXP_USB_Programmer.PcbDoc   4/19/2019  9:23:10 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : NXP_USB_Programmer-RoundHoles.TXT
+ASCII SlotHoles File : NXP_USB_Programmer-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.075mm (3mil)                                            Round             5         PTH        0.00mm (0.00inch)
+T2      0.15mm (6mil)                                             Round             5         PTH        0.00mm (0.00inch)
+T3      0.2mm (8mil)                                              Round             11        PTH        0.00mm (0.00inch)
+T4      0.5mm (20mil)                                             Slot              2         PTH        0.00mm (0.00inch)
+T5      0.7mm (28mil)                                             Round             6         PTH        0.00mm (0.00inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              29
+
+Total Processing Time (hh:mm:ss) : 00:00:00

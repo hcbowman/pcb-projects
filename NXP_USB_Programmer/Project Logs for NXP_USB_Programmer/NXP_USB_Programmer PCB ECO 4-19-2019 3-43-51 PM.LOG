@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=C2 Old Footprint=CAPC0402(1005)60_M New Footprint=SM0402
+Change Component Comment : Designator=C2 Old Comment=CAP 10nF 16V 0402(1005) New Comment=CAP CER 47PF 50V NP0 0402
+Change component parameters: Designator = "C2"; Footprint = "SM0402"; UniqueID = "\ODJNQTFA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "C0402C470D5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.com/product-detail/en/C0402C470D5GACTU/C0402C470D5GACTU-ND/2196707?utm_campaign=buynow&WT.z_cid=ref_octopart_dkc_buynow&utm_medium=aggregator&curr=usd&site=us&utm_source=octopart"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"

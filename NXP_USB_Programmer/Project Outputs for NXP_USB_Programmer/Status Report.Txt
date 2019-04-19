@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [NXP_USB_Programmer.PcbDoc]
+   Generated File[NXP_USB_Programmer-RoundHoles.TXT]
+   Generated File[NXP_USB_Programmer-SlotHoles.TXT]
+   Generated File[NXP_USB_Programmer.LDP]
+   Generated File[NXP_USB_Programmer.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 4:54:22 PM On 4/19/2019

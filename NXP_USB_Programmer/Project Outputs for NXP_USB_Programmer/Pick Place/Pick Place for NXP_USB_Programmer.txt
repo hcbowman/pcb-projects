@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\Projects\NXP_USB_Programmer\Project Outputs for NXP_USB_Programmer\Pick Place\Pick Place for NXP_USB_Programmer.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       19/04/19
+Time:       16:54
+Revision:   704836b475bf3201aede6e9f29a5644031310b7a
+Variant:    No variations
+Units used: mil
+
+Designator Comment                            Layer    Footprint               Center-X(mil) Center-Y(mil) Rotation Description                                                                                  
+U1         COM-UART-FT232R-SQ32               TopLayer COM-UART-FT232R-SQ32    639.764       172.244       90       ""                                                                                           
+J1         10118193-0001LF                    TopLayer FCI-10118193-0001LF-5_V 104.823       479.331       270      ""                                                                                           
+R1         "RES 1K OHM 0.5% 1/16W 0402 "      TopLayer SM0402                  1055.118      674.213       360      "1 kOhms ±0.5% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thin Film" 
+P1         "CONN HEADER VERT 6POS 1.27MM "    TopLayer SLIN-GRPB061VWVN-RC_V   905.512       620.472       90       "Connector Header Through Hole 6 position 0.050" (1.27mm)"                                   
+L1         "FERRITE BEAD 470 OHM 0603 1LN "   TopLayer BLM18PG471SN1D          265.748       609.252       360      "470 Ohms @ 100MHz 1 Power Line Ferrite Bead 0603 (1608 Metric) 1A 200mOhm"                  
+D2         "DIODE SCHOTTKY 30V 200MA SOD523 " TopLayer DIODE_SOD523            846.457       255.905       270      "Schottky Barrier Diode, 30 V, 0.2 A, -55 to 125 degC, 2-Pin SOD523F, RoHS, Tape and Reel"   
+D1         "DIODE SCHOTTKY 30V 200MA SOD523 " TopLayer DIODE_SOD523            910.433       250.984       270      "Schottky Barrier Diode, 30 V, 0.2 A, -55 to 125 degC, 2-Pin SOD523F, RoHS, Tape and Reel"   
+C5         "CAP CER 0.1UF 16V X7R 0402 "      TopLayer CAPC1005                1072.835      580.709       270      "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric) "                                   
+C4         "CAP CER 47PF 50V NP0 0402"        TopLayer SM0402                  324.803       437.992       180      "47pF ±0.5pF 50V Ceramic Capacitor C0G, NP0 0402 (1005 Metric)"                              
+C3         "CAP CER 47PF 50V NP0 0402"        TopLayer SM0402                  324.803       506.890       180      "47pF ±0.5pF 50V Ceramic Capacitor C0G, NP0 0402 (1005 Metric)"                              
+C2         "CAP CER 10000PF 16V X7R 0402"     TopLayer SM0402                  324.803       556.102       180      "10000pF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric) 
+"                               
+C1         "CAP CER 0.1UF 16V X7R 0402 "      TopLayer CAPC1005                1071.851      748.032       90       "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric) "                                   
