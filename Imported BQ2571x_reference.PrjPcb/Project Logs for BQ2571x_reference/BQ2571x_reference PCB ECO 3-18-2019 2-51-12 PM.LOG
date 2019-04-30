@@ -1,0 +1,111 @@
+Removed Pin From Net: NetName=VBAT Pin=CON1-P$1
+Removed Pin From Net: NetName=VSS Pin=CON1-P$4
+Removed Pin From Net: NetName=VSS Pin=CON1-P$5
+Removed Pin From Net: NetName=VIN Pin=CON8-P$1
+Removed Pin From Net: NetName=VSS Pin=CON8-P$3
+Removed Pin From Net: NetName=VSS Pin=CON8-P$4
+Removed Pin From Net: NetName=SDA Pin=CON8-P$5
+Removed Pin From Net: NetName=SCL Pin=CON8-P$6
+Removed Pin From Net: NetName=+3V3 Pin=CON8-P$7
+Removed Pin From Net: NetName=VSS Pin=IC1-P$27
+Removed Pin From Net: NetName=VSS Pin=IC1-P$33
+Removed Pin From Net: NetName=+3V3 Pin=J1-1-2
+Removed Pin From Net: NetName=+3V3 Pin=J1-1
+Removed Pin From Net: NetName=CHG_OK Pin=J1-2-2
+Removed Pin From Net: NetName=CHG_OK Pin=J1-2
+Removed Pin From Net: NetName=VSS Pin=J1-3-2
+Removed Pin From Net: NetName=VSS Pin=J1-3
+Removed Pin From Net: NetName=VIN Pin=J1-4-2
+Removed Pin From Net: NetName=VIN Pin=J1-4
+Removed Pin From Net: NetName=L1_INPUT Pin=Q1-P$1
+Removed Pin From Net: NetName=L1_INPUT Pin=Q1-P$2
+Removed Pin From Net: NetName=L1_INPUT Pin=Q1-P$3
+Removed Pin From Net: NetName=N$2 Pin=Q1-P$5
+Removed Pin From Net: NetName=N$2 Pin=Q1-P$6
+Removed Pin From Net: NetName=N$2 Pin=Q1-P$7
+Removed Pin From Net: NetName=N$2 Pin=Q1-P$8
+Removed Pin From Net: NetName=N$2 Pin=Q1-P$9
+Removed Pin From Net: NetName=VSS Pin=Q2-P$1
+Removed Pin From Net: NetName=VSS Pin=Q2-P$2
+Removed Pin From Net: NetName=VSS Pin=Q2-P$3
+Removed Pin From Net: NetName=L1_INPUT Pin=Q2-P$5
+Removed Pin From Net: NetName=L1_INPUT Pin=Q2-P$6
+Removed Pin From Net: NetName=L1_INPUT Pin=Q2-P$7
+Removed Pin From Net: NetName=L1_INPUT Pin=Q2-P$8
+Removed Pin From Net: NetName=L1_INPUT Pin=Q2-P$9
+Removed Pin From Net: NetName=VSS Pin=Q3-P$1
+Removed Pin From Net: NetName=VSS Pin=Q3-P$2
+Removed Pin From Net: NetName=VSS Pin=Q3-P$3
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q3-P$5
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q3-P$6
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q3-P$7
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q3-P$8
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q3-P$9
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q4-P$1
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q4-P$2
+Removed Pin From Net: NetName=L1_OUTPUT Pin=Q4-P$3
+Removed Pin From Net: NetName=VSYS Pin=Q4-P$5
+Removed Pin From Net: NetName=VSYS Pin=Q4-P$6
+Removed Pin From Net: NetName=VSYS Pin=Q4-P$7
+Removed Pin From Net: NetName=VSYS Pin=Q4-P$8
+Removed Pin From Net: NetName=VSYS Pin=Q4-P$9
+Removed Pin From Net: NetName=VIN Pin=Q5-6-P$5
+Removed Pin From Net: NetName=VIN Pin=Q5-6-P$6
+Removed Pin From Net: NetName=N$8 Pin=Q5-6-P$7
+Removed Pin From Net: NetName=N$8 Pin=Q5-6-P$8
+Removed Pin From Net: NetName=SRP Pin=Q7-P$1
+Removed Pin From Net: NetName=SRP Pin=Q7-P$2
+Removed Pin From Net: NetName=SRP Pin=Q7-P$3
+Removed Pin From Net: NetName=VSYS Pin=Q7-P$5
+Removed Pin From Net: NetName=VSYS Pin=Q7-P$6
+Removed Pin From Net: NetName=VSYS Pin=Q7-P$7
+Removed Pin From Net: NetName=VSYS Pin=Q7-P$8
+Removed Pin From Net: NetName=VSYS Pin=Q7-P$9
+Removed Pin From Net: NetName=CHG_OK Pin=R6-P$1
+Removed Pin From Net: NetName=VIN Pin=R13-P$2
+Change Net Name : Old Net Name=!PROCHOT New Net Name=NetIC1_P$11
+Change Net Name : Old Net Name=!RESET New Net Name=R\E\S\E\T\
+Change Net Name : Old Net Name=!SS New Net Name=S\S\
+Change Net Name : Old Net Name=ACN New Net Name=NetC47_P$2
+Change Net Name : Old Net Name=ACP New Net Name=NetC46_P$1
+Change Net Name : Old Net Name=BATDRV New Net Name=NetIC1_P$21
+Change Net Name : Old Net Name=CELL_BATPRESZ New Net Name=NetIC1_P$18
+Change Net Name : Old Net Name=CHG_OK New Net Name=NetIC1_P$4
+Change Net Name : Old Net Name=HIDRV1 New Net Name=NetIC1_P$31
+Change Net Name : Old Net Name=ILIM_HIZ New Net Name=NetC35_P$1
+Change Net Name : Old Net Name=LODRV1 New Net Name=NetC19_P$1
+Change Net Name : Old Net Name=LODRV2 New Net Name=NetC20_P$1
+Change Net Name : Old Net Name=N$1 New Net Name=NetC18_P$1
+Change Net Name : Old Net Name=N$2 New Net Name=NetC12_P$1
+Change Net Name : Old Net Name=N$3 New Net Name=NetC22_P$2
+Change Net Name : Old Net Name=N$4 New Net Name=NetR6_P$2
+Change Net Name : Old Net Name=N$8 New Net Name=NetC3_P$1
+Change Net Name : Old Net Name=N$12 New Net Name=NetC33_P$1
+Change Net Name : Old Net Name=N$14 New Net Name=NetC32_P$1
+Change Net Name : Old Net Name=N$20 New Net Name=NetPAD12_P$1
+Change Net Name : Old Net Name=N$24 New Net Name=NetQ9AB_B2
+Change Net Name : Old Net Name=N$26 New Net Name=NetQ9AB_B1
+Change Net Name : Old Net Name=N$29 New Net Name=NetC22_P$1
+Change Net Name : Old Net Name=OTG/VAP New Net Name=NetCON8_P$2
+Change Net Name : Old Net Name=REGN New Net Name=NetC30_P$1
+Change Net Name : Old Net Name=SRP New Net Name=NetC27_P$1
+Change Net Name : Old Net Name=VBAT New Net Name=NetC26_1
+Change Net Name : Old Net Name=VBUS New Net Name=NetC25_P$1
+Change Net Name : Old Net Name=VDDA New Net Name=NetC29_P$1
+Change Net Name : Old Net Name=VSYS New Net Name=NetC5_P$1
+Added Pin To Net: NetName=CHG_OK Pin=R6-P$1
+Added Net: Name=CHG_OK
+Added Pin To Net: NetName=NetCON8_P$1 Pin=CON8-P$1
+Added Pin To Net: NetName=NetCON8_P$1 Pin=R13-P$2
+Added Net: Name=NetCON8_P$1
+Added Pin To Net: NetName=NetCON8_P$3 Pin=CON8-P$3
+Added Pin To Net: NetName=NetCON8_P$3 Pin=CON8-P$4
+Added Net: Name=NetCON8_P$3
+Added Pin To Net: NetName=NetCON8_P$5 Pin=CON8-P$5
+Added Net: Name=NetCON8_P$5
+Added Pin To Net: NetName=NetCON8_P$6 Pin=CON8-P$6
+Added Net: Name=NetCON8_P$6
+Added Pin To Net: NetName=NetCON8_P$7 Pin=CON8-P$7
+Added Net: Name=NetCON8_P$7
+Added Pin To Net: NetName=VBAT Pin=CON1-P$1
+Added Net: Name=VBAT
