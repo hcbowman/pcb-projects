@@ -1,0 +1,38 @@
+Added Component: Designator=IC1(S-PWQFN-N32)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "BQ25713B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "Roambotics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "BQ25713B"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBUS Pin=IC1-P$1
+Added Pin To Net: NetName=ACN Pin=IC1-P$2
+Added Pin To Net: NetName=ACP Pin=IC1-P$3
+Added Pin To Net: NetName=CHG_OK Pin=IC1-P$4
+Added Pin To Net: NetName=ILIM_HIZ Pin=IC1-P$6
+Added Pin To Net: NetName=VDDA Pin=IC1-P$7
+Added Pin To Net: NetName=IADPT Pin=IC1-P$8
+Added Pin To Net: NetName=IBAT Pin=IC1-P$9
+Added Pin To Net: NetName=PSYS Pin=IC1-P$10
+Added Pin To Net: NetName=P\R\O\C\H\O\T\ Pin=IC1-P$11
+Added Pin To Net: NetName=SDA Pin=IC1-P$12
+Added Pin To Net: NetName=SCL Pin=IC1-P$13
+Added Pin To Net: NetName=CMPIN Pin=IC1-P$14
+Added Pin To Net: NetName=CMPOUT Pin=IC1-P$15
+Added Pin To Net: NetName=COMP1 Pin=IC1-P$16
+Added Pin To Net: NetName=COMP2 Pin=IC1-P$17
+Added Pin To Net: NetName=CELL_BATPRESZ Pin=IC1-P$18
+Added Pin To Net: NetName=SRN_PRE Pin=IC1-P$19
+Added Pin To Net: NetName=SRP_PRE Pin=IC1-P$20
+Added Pin To Net: NetName=BATDRV Pin=IC1-P$21
+Added Pin To Net: NetName=VSYS Pin=IC1-P$22
+Added Pin To Net: NetName=L1_OUTPUT Pin=IC1-P$23
+Added Pin To Net: NetName=HIDRV2 Pin=IC1-P$24
+Added Pin To Net: NetName=BTST2 Pin=IC1-P$25
+Added Pin To Net: NetName=LODRV2 Pin=IC1-P$26
+Added Pin To Net: NetName=REGN Pin=IC1-P$28
+Added Pin To Net: NetName=LODRV1 Pin=IC1-P$29
+Added Pin To Net: NetName=BTST1 Pin=IC1-P$30
+Added Pin To Net: NetName=HIDRV1 Pin=IC1-P$31
+Added Pin To Net: NetName=L1_INPUT Pin=IC1-P$32
+Added Pin To Net: NetName=VSS Pin=IC1-P$33

@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=MISO Pin=J100-1
+Added Pin To Net: NetName=+3V3 Pin=J100-2
+Added Pin To Net: NetName=SCK Pin=J100-3
+Added Pin To Net: NetName=MOSI Pin=J100-4
+Added Pin To Net: NetName=R\E\S\E\T\ Pin=J100-5
+Added Pin To Net: NetName=GNDI Pin=J100-6

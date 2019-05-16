@@ -1,0 +1,76 @@
+Removed Pin From Net: NetName=VIN Pin=CON8-P$1
+Removed Pin From Net: NetName=VSS Pin=CON8-P$3
+Removed Pin From Net: NetName=VSS Pin=CON8-P$4
+Removed Pin From Net: NetName=SDA Pin=CON8-P$5
+Removed Pin From Net: NetName=SCL Pin=CON8-P$6
+Removed Pin From Net: NetName=+3V3 Pin=CON8-P$7
+Removed Pin From Net: NetName=VSYS Pin=CON8-P$8
+Removed Pin From Net: NetName=+3V3 Pin=J1-1-2
+Removed Pin From Net: NetName=+3V3 Pin=J1-1
+Removed Pin From Net: NetName=CHG_INDICATOR Pin=J1-2-2
+Removed Pin From Net: NetName=CHG_INDICATOR Pin=J1-2
+Removed Pin From Net: NetName=VSS Pin=J1-3-2
+Removed Pin From Net: NetName=VSS Pin=J1-3
+Removed Pin From Net: NetName=VIN Pin=J1-4-2
+Removed Pin From Net: NetName=VIN Pin=J1-4
+Change Component Comment : Designator=CON3 Old Comment= New Comment=AVX-9159-4-PIN-CARD-EDGE
+Change Component Comment : Designator=D1_1 Old Comment= New Comment=HSMG-C110
+Change Component Comment : Designator=CON2 Old Comment= New Comment=HTP-CON-M411
+Change Component Designator: OldDesignator=D1_1 NewDesignator=D4
+Change Component Designator: OldDesignator=Q1_1 NewDesignator=Q5
+Change Component Designator: OldDesignator=R1_1 NewDesignator=R28
+Change component parameters: Designator = "CON2"; Footprint = "HTP-CON-M411"; UniqueID = "\UFRKABJF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HTP-CON-M411"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "Roambotics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "HYTEPRO_HTP-CON-M411"; VariantName = "[No Variations]"
+Change component parameters: Designator = "CON3"; Footprint = "AVX-9159-4-PIN-EDGE"; UniqueID = "\IUWCRUPI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "AVX-9159-4-PIN-CARD-EDGE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "Roambotics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "4_PIN_CONNECTOR"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D4"; Footprint = "LED3_HSMX-C110"; UniqueID = "\IVFTTYTG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HSMG-C110"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "Roambotics Bullshit Managed Library"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "LEDV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R28"; Footprint = "0603"; UniqueID = "\LBTDWKVO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "SMD_RES"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "Roambotics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "RESISTOR"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q5"; Footprint = "SOT-23"; UniqueID = "\BWUTDYFA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "D"; Value = "D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "SMD-MOSFET-N-CH-60V-300MA-LOGIC-LEVEL-FET-2N7002(SOT-23)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "G"; Value = "G"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "Seeed-Transistor"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MPN"; Value = "2N7002,215"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "S"; Value = "S"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "MOSFET-N"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VSS Pin=CON2-P$1
+Added Pin To Net: NetName=VIN Pin=CON2-P$2
+Added Pin To Net: NetName=VIN Pin=CON2-P$3
+Added Pin To Net: NetName=VSS Pin=CON2-P$4
+Added Pin To Net: NetName=VIN Pin=CON3-P$1
+Added Pin To Net: NetName=VSS Pin=CON3-P$2
+Added Pin To Net: NetName=VSS Pin=CON3-P$3
+Added Pin To Net: NetName=VSYS Pin=CON3-P$4
+Added Pin To Net: NetName=CHG_INDICATOR Pin=Q5-1
+Added Pin To Net: NetName=VSS Pin=Q5-2
+Added Pin To Net: NetName=+3V3 Pin=R28-P$2
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=Q5-3
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetD4_2 3 Pin=R28-P$1
+Added Net: Name=NetD4_2 3

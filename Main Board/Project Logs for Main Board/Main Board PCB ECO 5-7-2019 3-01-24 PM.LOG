@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=NetLED1_1 Pin=R5-P$1
+Added Pin To Net: NetName=NetQ6_3 Pin=R5-P$2
+Added Pin To Net: NetName=NetLED1_4 Pin=R28-P$1
+Added Pin To Net: NetName=NetQ5_3 Pin=R28-P$2
+Added Pin To Net: NetName=NetLED1_5 Pin=R29-P$1
+Added Pin To Net: NetName=NetQ8_3 Pin=R29-P$2

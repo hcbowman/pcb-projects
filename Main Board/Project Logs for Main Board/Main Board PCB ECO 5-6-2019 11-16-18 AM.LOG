@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=VIN Pin=Q5-6-P$5
+Removed Pin From Net: NetName=VIN Pin=Q5-6-P$6
+Removed Pin From Net: NetName=NetC3_P$1 Pin=Q5-6-P$7
+Removed Pin From Net: NetName=NetC3_P$1 Pin=Q5-6-P$8
+Added Pin To Net: NetName=NetC3_P$1 Pin=Q5-6-P$5
+Added Pin To Net: NetName=NetC3_P$1 Pin=Q5-6-P$6
+Added Pin To Net: NetName=VIN Pin=Q5-6-P$7
+Added Pin To Net: NetName=VIN Pin=Q5-6-P$8
+Change Net Name : Old Net Name=SRN_PRE New Net Name=NetIC1_P$19
+Change Net Name : Old Net Name=SRP_PRE New Net Name=NetIC1_P$20

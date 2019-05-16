@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=VSS Pin=C25-P$2
+Removed Pin From Net: NetName=VSS Pin=CON3-P$2
+Removed Pin From Net: NetName=VSS Pin=CON3-P$2
+Removed Pin From Net: NetName=VSS Pin=CON3-P$3
+Removed Pin From Net: NetName=VSS Pin=CON3-P$3
+Removed Pin From Net: NetName=VSS Pin=Q5-2
+Removed Pin From Net: NetName=VSS Pin=Q10-2
+Removed Pin From Net: NetName=VSS Pin=R1-P$2
+Removed Pin From Net: NetName=VSS Pin=R5-P$1
+Change Component Comment : Designator=PAD8 Old Comment=VSS New Comment=PGND
+Added Pin To Net: NetName=DGND Pin=C25-P$2
+Added Pin To Net: NetName=DGND Pin=Q10-2
+Change Net Name : Old Net Name=VSS New Net Name=PGND
+Added Pin To Net: NetName=VSS Pin=CON3-P$2
+Added Pin To Net: NetName=VSS Pin=CON3-P$2
+Added Pin To Net: NetName=VSS Pin=CON3-P$3
+Added Pin To Net: NetName=VSS Pin=CON3-P$3
+Added Pin To Net: NetName=VSS Pin=Q5-2
+Added Pin To Net: NetName=VSS Pin=R1-P$2
+Added Pin To Net: NetName=VSS Pin=R5-P$1
+Added Net: Name=VSS

@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=GNDI Pin=R5-P$1
+Added Pin To Net: NetName=VSS Pin=R5-P$1
